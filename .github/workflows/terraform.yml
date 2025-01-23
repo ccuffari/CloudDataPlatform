@@ -5,7 +5,10 @@ on:
     branches:
       - main
     paths:
-      - '.terraform/**'
+      - '**/*.tf'
+      - '**/*.tfvars'
+      - '**/*.yml'
+      - '.terraform.lock.hcl'
 
 jobs:
   terraform:
@@ -26,13 +29,24 @@ jobs:
         credentials_json: ${{ secrets.GCP_SA_KEY }}
 
     - name: Terraform Init
-      run: terraform -chdir=.terraform init
+      run: terraform init
+      working-directory: .terraform
 
     - name: Terraform Validate
-      run: terraform -chdir=.terraform validate
+      run: terraform validate
+      working-directory: .terraform
 
     - name: Terraform Plan
-      run: terraform -chdir=.terraform plan
+      run: terraform plan -detailed-exitcode -out=tfplan
+      working-directory: .terraform
+
+    - name: Review Terraform Plan
+      if: steps.terraform-plan.outputs.exitcode == 2
+      run: |
+        echo "Changes detected in the infrastructure plan:"
+        terraform show -json tfplan | jq
 
     - name: Terraform Apply
-      run: terraform -chdir=.terraform apply -auto-approve
+      if: steps.terraform-plan.outputs.exitcode == 2
+      run: terraform apply -auto-approve tfplan
+      working-directory: .terraform
