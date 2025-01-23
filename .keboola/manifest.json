@@ -68,8 +68,8 @@
       "path": "extractor/keboola.ex-onedrive/excel-one-drive",
       "rows": [
         {
-          "id": "103363163",
-          "path": "rows/excel"
+          "id": "103485466",
+          "path": "rows/excel-file"
         }
       ]
     },
