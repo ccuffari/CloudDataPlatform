@@ -1,22 +1,121 @@
 [
     {
-        "name": "id",
-        "type": "STRING",
-        "mode": "REQUIRED"
-    },
-    {
-        "name": "name",
-        "type": "STRING",
-        "mode": "NULLABLE"
-    },
-    {
-        "name": "age",
+        "name": "Id",
+        "mode": "NULLABLE",
         "type": "INTEGER",
-        "mode": "NULLABLE"
+        "description": "",
+        "fields": []
     },
     {
-        "name": "date1",
+        "name": "Segment",
+        "mode": "NULLABLE",
+        "type": "STRING",
+        "description": "",
+        "fields": []
+    },
+    {
+        "name": "Country",
+        "mode": "NULLABLE",
+        "type": "STRING",
+        "description": "",
+        "fields": []
+    },
+    {
+        "name": "Product",
+        "mode": "NULLABLE",
+        "type": "STRING",
+        "description": "",
+        "fields": []
+    },
+    {
+        "name": "Discount_Band",
+        "mode": "NULLABLE",
+        "type": "STRING",
+        "description": "",
+        "fields": []
+    },
+    {
+        "name": "Units_Sold",
+        "mode": "NULLABLE",
+        "type": "FLOAT",
+        "description": "",
+        "fields": []
+    },
+    {
+        "name": "Manufacturing_Price",
+        "mode": "NULLABLE",
+        "type": "FLOAT",
+        "description": "",
+        "fields": []
+    },
+    {
+        "name": "Sale_Price",
+        "mode": "NULLABLE",
+        "type": "FLOAT",
+        "description": "",
+        "fields": []
+    },
+    {
+        "name": "Gross_Sales",
+        "mode": "NULLABLE",
+        "type": "FLOAT",
+        "description": "",
+        "fields": []
+    },
+    {
+        "name": "Discounts",
+        "mode": "NULLABLE",
+        "type": "FLOAT",
+        "description": "",
+        "fields": []
+    },
+    {
+        "name": "Sales",
+        "mode": "NULLABLE",
+        "type": "FLOAT",
+        "description": "",
+        "fields": []
+    },
+    {
+        "name": "COGS",
+        "mode": "NULLABLE",
+        "type": "FLOAT",
+        "description": "",
+        "fields": []
+    },
+    {
+        "name": "Profit",
+        "mode": "NULLABLE",
+        "type": "FLOAT",
+        "description": "",
+        "fields": []
+    },
+    {
+        "name": "Date",
+        "mode": "NULLABLE",
         "type": "DATE",
-        "mode": "NULLABLE"
-    }    
+        "description": "",
+        "fields": []
+    },
+    {
+        "name": "Month_Number",
+        "mode": "NULLABLE",
+        "type": "INTEGER",
+        "description": "",
+        "fields": []
+    },
+    {
+        "name": "Month_Name",
+        "mode": "NULLABLE",
+        "type": "STRING",
+        "description": "",
+        "fields": []
+    },
+    {
+        "name": "Year",
+        "mode": "NULLABLE",
+        "type": "FLOAT",
+        "description": "",
+        "fields": []
+    }
 ]
