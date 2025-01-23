@@ -57,13 +57,6 @@
     {
       "branchId": 367258,
       "componentId": "keboola.ex-onedrive",
-      "id": "103358573",
-      "path": "extractor/keboola.ex-onedrive/my-one-drive-excel-sheets-data-source",
-      "rows": []
-    },
-    {
-      "branchId": 367258,
-      "componentId": "keboola.ex-onedrive",
       "id": "103363143",
       "path": "extractor/keboola.ex-onedrive/excel-one-drive",
       "rows": [
