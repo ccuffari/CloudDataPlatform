@@ -13,5 +13,10 @@
         "name": "age",
         "type": "INTEGER",
         "mode": "NULLABLE"
-    }
+    },
+    {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+    }    
 ]
