@@ -17,6 +17,6 @@ module "bigquery" {
 
 module "service_accounts" {
   source      = "./modules/IAM"
-  project_id  = var.project
+  project  = var.project
   service_accounts = var.service_accounts
 }
