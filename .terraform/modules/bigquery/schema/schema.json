@@ -15,7 +15,7 @@
         "mode": "NULLABLE"
     },
     {
-        "name": "date",
+        "name": "date1",
         "type": "DATE",
         "mode": "NULLABLE"
     }    
