@@ -1,0 +1,27 @@
+{
+  "parameters": {},
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "source": "{{:default-bucket:extractor/keboola.ex-onedrive/excel-one-drive}}.Data",
+          "destination": "Data.csv",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": [],
+          "keep_internal_timestamp_column": false
+        }
+      ]
+    },
+    "output": {
+      "tables": [
+        {
+          "destination": "out.c-output.tableOutput",
+          "primary_key": [],
+          "source": "tableOutput"
+        }
+      ]
+    }
+  }
+}

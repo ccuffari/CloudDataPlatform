@@ -1,0 +1,9 @@
+{
+  "name": "keboola.python-transformation-v2-103359720",
+  "enabled": true,
+  "task": {
+    "mode": "run",
+    "configPath": "transformation/keboola.python-transformation-v2/python-test1"
+  },
+  "continueOnFailure": false
+}

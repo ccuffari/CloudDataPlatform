@@ -1,0 +1,129 @@
+{
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "source": "out.c-output.tableOutput",
+          "destination": "out.c-output.tableOutput.csv",
+          "changed_since": "",
+          "columns": [
+            "Id",
+            "Segment",
+            "Country",
+            "Product",
+            "Discount_Band",
+            "Units_Sold",
+            "Manufacturing_Price",
+            "Sale_Price",
+            "Gross_Sales",
+            "Discounts",
+            "Sales",
+            "COGS",
+            "Profit",
+            "Date",
+            "Month_Number",
+            "Month_Name",
+            "Year"
+          ]
+        }
+      ]
+    }
+  },
+  "parameters": {
+    "tables": [
+      {
+        "dbName": "sales_data",
+        "tableId": "out.c-output.tableOutput",
+        "chunkSize": 1000,
+        "incremental": false,
+        "items": [
+          {
+            "name": "Id",
+            "type": "INTEGER",
+            "dbName": "Id"
+          },
+          {
+            "name": "Segment",
+            "type": "STRING",
+            "dbName": "Segment"
+          },
+          {
+            "name": "Country",
+            "type": "STRING",
+            "dbName": "Country"
+          },
+          {
+            "name": "Product",
+            "type": "STRING",
+            "dbName": "Product"
+          },
+          {
+            "name": "Discount_Band",
+            "type": "STRING",
+            "dbName": "Discount_Band"
+          },
+          {
+            "name": "Units_Sold",
+            "type": "FLOAT",
+            "dbName": "Units_Sold"
+          },
+          {
+            "name": "Manufacturing_Price",
+            "type": "FLOAT",
+            "dbName": "Manufacturing_Price"
+          },
+          {
+            "name": "Sale_Price",
+            "type": "FLOAT",
+            "dbName": "Sale_Price"
+          },
+          {
+            "name": "Gross_Sales",
+            "type": "FLOAT",
+            "dbName": "Gross_Sales"
+          },
+          {
+            "name": "Discounts",
+            "type": "FLOAT",
+            "dbName": "Discounts"
+          },
+          {
+            "name": "Sales",
+            "type": "FLOAT",
+            "dbName": "Sales"
+          },
+          {
+            "name": "COGS",
+            "type": "FLOAT",
+            "dbName": "COGS"
+          },
+          {
+            "name": "Profit",
+            "type": "FLOAT",
+            "dbName": "Profit"
+          },
+          {
+            "name": "Date",
+            "type": "DATE",
+            "dbName": "Date"
+          },
+          {
+            "name": "Month_Number",
+            "type": "INTEGER",
+            "dbName": "Month_Number"
+          },
+          {
+            "name": "Month_Name",
+            "type": "STRING",
+            "dbName": "Month_Name"
+          },
+          {
+            "name": "Year",
+            "type": "FLOAT",
+            "dbName": "Year"
+          }
+        ]
+      }
+    ]
+  }
+}

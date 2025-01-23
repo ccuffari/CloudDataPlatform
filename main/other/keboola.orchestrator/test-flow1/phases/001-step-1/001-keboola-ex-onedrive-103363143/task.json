@@ -1,0 +1,9 @@
+{
+  "name": "keboola.ex-onedrive-103363143",
+  "enabled": true,
+  "task": {
+    "mode": "run",
+    "configPath": "extractor/keboola.ex-onedrive/excel-one-drive"
+  },
+  "continueOnFailure": false
+}

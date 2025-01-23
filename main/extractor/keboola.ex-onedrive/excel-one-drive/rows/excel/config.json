@@ -1,0 +1,18 @@
+{
+  "parameters": {
+    "workbook": {
+      "driveId": "2896686E9DA029D7",
+      "fileId": "2896686E9DA029D7!s96d3ae1c94c54d13b8b8f8e60a58a62e",
+      "metadata": {
+        "name": "04-01-Financial Sample Data.xlsx"
+      }
+    },
+    "worksheet": {
+      "name": "Data",
+      "id": "{00000000-0001-0000-0000-000000000000}",
+      "metadata": {
+        "name": "Data"
+      }
+    }
+  }
+}
