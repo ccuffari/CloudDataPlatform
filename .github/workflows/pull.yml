@@ -2,6 +2,7 @@ name: Automatic pull
 on:
   schedule:
     - cron: '*/5 * * * *'
+  workflow_dispatch: # Permette di eseguire il workflow manualmente
 permissions:
   contents: write
 env:
