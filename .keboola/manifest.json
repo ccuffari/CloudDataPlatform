@@ -49,6 +49,13 @@
   "configurations": [
     {
       "branchId": 367258,
+      "componentId": "keboola.ex-google-drive",
+      "id": "103469785",
+      "path": "extractor/keboola.ex-google-drive/cfc-google-sheet",
+      "rows": []
+    },
+    {
+      "branchId": 367258,
       "componentId": "keboola.ex-onedrive",
       "id": "103358573",
       "path": "extractor/keboola.ex-onedrive/my-one-drive-excel-sheets-data-source",

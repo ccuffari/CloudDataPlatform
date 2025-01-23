@@ -1,0 +1,28 @@
+{
+  "runtime": {
+    "uiMode": "simple"
+  },
+  "authorization": {
+    "oauth_api": {
+      "id": "103469789",
+      "version": 3
+    }
+  },
+  "parameters": {
+    "outputBucket": "in.c-keboola-ex-google-drive-103469785",
+    "sheets": [
+      {
+        "id": 84247,
+        "enabled": true,
+        "fileId": "1gy5nOVL58u_XuUVw4KzJ-23ENrPzeAwInxJAy2XHmvM",
+        "fileTitle": "CDP_Dataset",
+        "sheetId": 0,
+        "sheetTitle": "Foglio1",
+        "outputTable": "CDP_Dataset-Foglio1",
+        "header": {
+          "rows": 1
+        }
+      }
+    ]
+  }
+}
