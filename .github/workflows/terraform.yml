@@ -1,3 +1,56 @@
+# name: Terraform Deploy to GCP
+
+# on:
+#   push:
+#     branches:
+#       - main
+#     paths:
+#       - '**/*.tf'
+#       - '**/*.tfvars'
+#       - '**/*.yml'
+#       - '.terraform.lock.hcl'
+
+# jobs:
+#   terraform:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - name: Checkout repository
+#       uses: actions/checkout@v4
+
+#     - name: Setup Terraform
+#       uses: hashicorp/setup-terraform@v3
+#       with:
+#         terraform_version: 1.5.7
+
+#     - name: Authenticate to Google Cloud
+#       uses: google-github-actions/auth@v2
+#       with:
+#         credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+#     - name: Terraform Init
+#       run: terraform init
+#       working-directory: .terraform
+
+#     - name: Terraform Validate
+#       run: terraform validate
+#       working-directory: .terraform
+
+#     - name: Terraform Plan
+#       run: terraform plan -detailed-exitcode -out=tfplan
+#       working-directory: .terraform
+
+#     - name: Review Terraform Plan
+#       if: steps.terraform-plan.outputs.exitcode == 2
+#       run: |
+#         echo "Changes detected in the infrastructure plan:"
+#         terraform show -json tfplan | jq
+
+#     - name: Terraform Apply
+#       if: steps.terraform-plan.outputs.exitcode == 2
+#       run: terraform apply -auto-approve tfplan
+#       working-directory: .terraform
+
 name: Terraform Deploy to GCP
 
 on:
@@ -5,10 +58,7 @@ on:
     branches:
       - main
     paths:
-      - '**/*.tf'
-      - '**/*.tfvars'
-      - '**/*.yml'
-      - '.terraform.lock.hcl'
+      - '.terraform/**'
 
 jobs:
   terraform:
@@ -29,24 +79,13 @@ jobs:
         credentials_json: ${{ secrets.GCP_SA_KEY }}
 
     - name: Terraform Init
-      run: terraform init
-      working-directory: .terraform
+      run: terraform -chdir=.terraform init
 
     - name: Terraform Validate
-      run: terraform validate
-      working-directory: .terraform
+      run: terraform -chdir=.terraform validate
 
     - name: Terraform Plan
-      run: terraform plan -detailed-exitcode -out=tfplan
-      working-directory: .terraform
-
-    - name: Review Terraform Plan
-      if: steps.terraform-plan.outputs.exitcode == 2
-      run: |
-        echo "Changes detected in the infrastructure plan:"
-        terraform show -json tfplan | jq
+      run: terraform -chdir=.terraform plan
 
     - name: Terraform Apply
-      if: steps.terraform-plan.outputs.exitcode == 2
-      run: terraform apply -auto-approve tfplan
-      working-directory: .terraform
+      run: terraform -chdir=.terraform apply -auto-approve
