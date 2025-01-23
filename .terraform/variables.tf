@@ -19,3 +19,15 @@ variable "location" {
   type        = string
   default     = "europe-north1"
 }
+
+
+variable "project" {
+  description = "GCP project ID"
+  type        = string
+}
+
+variable "location" {
+  description = "GCP resource location"
+  type        = string
+  default     = "us-central1"
+}
