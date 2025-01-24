@@ -1,10 +1,10 @@
 # Main Directory Files
 
-# main.tf
-provider "google" {
-  project = var.project
-  region  = var.location
-}
+# # main.tf
+# provider "google" {
+#   project = var.project
+#   region  = var.location
+# }
 
 module "bigquery" {
   source      = "./modules/bigquery"
