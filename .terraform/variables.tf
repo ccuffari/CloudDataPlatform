@@ -27,3 +27,9 @@ variable "service_accounts" {
     description  = string
   }))
 }
+
+variable "apis" {
+  description = "Elenco delle API da abilitare"
+  type        = set(string)
+  default     = ["datacatalog.googleapis.com"]
+}

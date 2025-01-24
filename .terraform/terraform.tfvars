@@ -13,3 +13,4 @@ service_accounts = {
     description  = "SA utilizzato per BigQuery operations"
   }
 }
+apis       = ["datacatalog.googleapis.com"]

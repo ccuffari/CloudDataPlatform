@@ -20,3 +20,9 @@ module "service_accounts" {
   project  = var.project
   service_accounts = var.service_accounts
 }
+
+module "enable_apis" {
+  source     = "./modules/apis"
+  project_id = var.project_id
+  apis       = var.apis
+}
