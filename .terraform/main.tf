@@ -22,7 +22,7 @@ module "service_accounts" {
 }
 
 module "enable_apis" {
-  source     = "./modules/apis"
-  project_id = var.project_id
+  source     = "./modules/APIs"
+  project = var.project
   apis       = var.apis
 }
