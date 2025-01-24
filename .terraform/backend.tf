@@ -1,7 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket  = " terraform-state-cfc"
+    bucket  = "terraform-state-cfc"
     prefix  = "terraform/state"
-    project = "clouddataplatform"
   }
 }
