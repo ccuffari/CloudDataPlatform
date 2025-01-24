@@ -3,6 +3,9 @@
   "enabled": true,
   "task": {
     "mode": "run",
+    "configRowIds": [
+      "103599247"
+    ],
     "configPath": "extractor/keboola.ex-onedrive/excel-one-drive"
   },
   "continueOnFailure": false
