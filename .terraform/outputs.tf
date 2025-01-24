@@ -19,10 +19,6 @@ output "service_account_names" {
   value       = module.service_accounts.service_account_names
 }
 
-output "bigquery_dataset_ids" {
-  value = module.bigquery.dataset_ids
-}
-
 output "enabled_apis" {
   description = "Elenco delle API abilitate nel progetto"
   value       = module.enable_apis.enabled_services
