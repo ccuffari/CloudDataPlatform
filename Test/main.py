@@ -1,11 +1,13 @@
 import streamlit as st
 import pandas as pd
+import os
 
 # Funzione per caricare i dati (eventualmente si può usare @st.cache_data in Streamlit 1.18+)
 @st.cache_data(show_spinner=False)
 def load_data():
-    # Assicurati che il file "Cloud_Data_Platform.csv" sia nella stessa cartella dello script.
-    df = pd.read_csv("CDP_generator.csv", encoding='latin-1')  # or 'iso-8859-1', 'cp1252')
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    csv_path = os.path.join(current_dir, "CDP_generator.csv")
+    df = pd.read_csv(csv_path, encoding='latin-1')
     return df
 
 # Ordine predefinito delle dimensioni (come da indice)
